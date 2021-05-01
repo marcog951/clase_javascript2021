@@ -95,18 +95,18 @@ console.log(Infinity);
 // NaN representa un error de calculo, es el resultado de una 
 // oprecion incorrecta o indefinida
 
-console.log("No es un numero"/2);
+//console.log("No es un numero"/2);
 
 // NaN es pegajoso. Cualquier operación sobre NaN devuelve NaN
 
-console.log("No es un numero"/2+5);
+//console.log("No es un numero"/2+5);
 
 // Tipo de datos BigInt
 
 // Valores enteros mayores que (2^53-1) o menor que (2^53-1)
 
 let numero_grande =984654984664487897879854865446496846549646465494649464984446465;
-console.log(numero_grande);
+//console.log(numero_grande);
 
 // Tipo String
 
@@ -114,9 +114,9 @@ let texto ="hola";
 let texto_dos ='hola';
 let texto_tres=``; //backticks funcionalidad extendidas
 let nomb="Marco";
-console.log("Hola ${nomb}");
-console.log('Hola ${nomb}');
-console.log(`Hola ${nomb}`);
+//onsole.log("Hola ${nomb}");
+//console.log('Hola ${nomb}');
+//console.log(`Hola ${nomb}`);
 
 // Tipo Booleano
 
@@ -132,7 +132,7 @@ let mayor=4>1;
 // Forma un tipo propio separadp que contiene solo el valor null
 
 let edad=null;
-console.log(edad);
+//console.log(edad);
 
 // en JS null NO significa un objeto no existente
 // Es solo un valor especial que representa nada, vacio o valor desconocido
@@ -143,13 +143,53 @@ console.log(edad);
 // El significado de undefined es valor no asignado
 
 let edad_dos;
-console.log(edad_dos);
+//console.log(edad_dos);
 
 // El operador typeof o función typeof(x), devuelve el tipo de dato
 
-console.log(typeof undefined);
+/*console.log(typeof undefined);
 console.log(typeof 0);
 console.log(typeof true);
 console.log(typeof "Hola");
-console.log(typeof 10n);
+console.log(typeof 10n);*/
 
+// Interacciones: alert, prompt, confirm
+
+// alert
+
+//alert("Hola");
+
+//prompt
+
+//let nombre_capturado = prompt('Digite el nombre','Hola');
+
+// confirm
+
+confirm("¿Te gusta el helado?");
+
+//CONVERSION DE TIPOS
+
+// Existen dos tipos de conversiones explicita e implicita
+
+//Convertir a String
+
+let valor = true;
+console.log(typeof valor);
+
+valor= String(valor);
+valor= String(false);
+valor= String(null);
+valor= String(undefined);
+console.log(valor);
+console.log(typeof valor);
+    
+// Convertir a numero
+
+// Conversiones numericas que ocurren auntomaticamente en funsiones matematicas y expresiones
+
+//alert('6'/'2');
+
+let cadena="123";
+let num_cad=Number(cadena);
+
+console.log(Number('Hoa'));
