@@ -192,4 +192,92 @@ console.log(typeof valor);
 let cadena="123";
 let num_cad=Number(cadena);
 
-console.log(Number('Hoa'));
+console.log(Number('Hola'));
+
+//Convertir a Boleano
+
+console.log(Boolean("hola"));
+
+// OPERADORES BASICOS
+
+// Operadores unarios y binarios
+
+a=4;
+b=8;
+
+res= a+b;
+res=a-b;
+res=a*b;
+res=a/b;
+res=a% b;
+res=a**b;
+
+//alert('1'+2); //12
+
+//alert(2+2+'1'); //41
+//alert('1'+2+2); //122
+
+//Opreciones Unaria +
+
+a=1;
+console.log(+a);
+
+a=-1;
+console.log(+a);
+
+console.log(+true);
+console.log(+false);
+console.log(+NaN);
+console.log(+undefined);
+console.log(+null);
+
+a="2";
+b="3";
+
+console.log(+a + +b); 
+
+//Opreciones Unaria -
+
+a=1;
+console.log(+a);
+
+a=-1;
+console.log(-a);
+
+console.log(-true);
+console.log(-false);
+console.log(-NaN);
+console.log(-undefined);
+console.log(-null);
+
+a="2";
+b="3";
+
+console.log(-a + +b); 
+
+// ASIGNACIONES
+
+a= 2+3;
+a=b=c=2+3;
+c=2+3;
+b=c;
+a=b;
+
+a=3-(a=b+1);
+
+// Incremente y Decremento
+
+// ++
+// --
+
+// Posición del incremento o decremento
+
+a=1;
+b=++a;
+console.log(b); //2
+
+a=1;
+b=a++;
+c=a;
+console.log(b);//1
+console.log(c);//2
