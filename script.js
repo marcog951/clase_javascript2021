@@ -565,3 +565,305 @@ console.log(!!undefined); // false == Boolean(undefined)
 a = null ?? undefined ?? undefined ?? null ?? "hola" ?? null ?? 'carlos'; // "hola"
 
 a = undefined ?? undefined ?? undefined ?? null ?? null ?? null ; // null
+
+// BUCLES WHILE Y FOR
+
+/* While( condición){
+}*/
+let i = 1;
+while(i<=10){
+    console.log(`El valor de i es: ${i}`);
+    i++;
+}
+
+console.log('****************');
+i = 10;
+while(i){
+    console.log(`El valor de i es: ${i}`);
+    i--;
+}
+
+// do - while
+
+/*
+do {
+}while(condición);
+*/
+console.log('****************');
+i = 1;
+do{
+console.log(`El valor de i es ${i}`);
+i++;
+}while(i<= 10);
+
+// Ciclo for
+
+/*
+    for(comienzo; condición; incremento){
+    }
+*/
+
+console.log('****************');
+for(i=0; i<= 10; i++){
+
+console.log(`El valor de i es ${i}`);
+}
+
+console.log('****************');
+for(i=10; i>= 0; i--){
+
+console.log(`El valor de i es ${i}`);
+}
+
+
+// Alcance de la variable
+console.log('****************');
+for(let z=0; z<=10; z++){
+    console.log(`El valor de z es ${z}`);
+}
+
+//console.log(`El valor de z por fuera es ${z}`);
+
+console.log('****************');
+let w = 0;
+for(w=0; w<=10; w++){
+    console.log(`El valor de w es ${w}`);
+}
+
+console.log(`El valor de w por fuera es ${w}`);
+
+// Saltado de partes
+
+console.log('****************');
+w = 0;
+for(; w<=10;){
+    console.log(`El valor de w es ${w++}`);
+}
+
+// Break y continue
+console.log('******** Breack ********');
+w = 0;
+while(1){
+    console.log(`El valor de w es ${w++}`);
+    if(w == 11) break;
+}
+
+for(i=1; i<= 10; i ++){
+    if (i%2 != 0) continue;
+    console.log(`${i} es un número par.`)
+}
+
+// Etiqueta para break y continue
+console.log('******** Etiquetas ********');
+for(i =0; i<= 10; i ++){
+    for(j =0; j<= 10; j ++){
+        
+        console.log(`La suma de i+j es ${i+j}`);
+        if (j == 2) break;
+    }
+     if(j == 2) break;
+}
+console.log('Salió')
+
+// Etiqueta para break y continue
+console.log('******** Etiquetas ********');
+princial: for(i =0; i<= 10; i ++){
+    for(j =0; j<= 10; j ++){ 
+        console.log(`La suma de i+j es ${i+j}`);
+        if (j == 2) break princial;
+    }
+}
+console.log('Salió')
+
+// Switch
+
+/*
+switch(valor):{
+    case valor1:
+        [break];
+    default:
+        [break];
+}
+*/
+
+a = 2 + 2;
+switch(a){
+    case 3:
+        console.log('El resultado es 3');
+        break;
+    case 4:
+        console.log('El resultado es 4');
+        break;
+    default:
+        console.log('Ninguno de los dos valores');
+    
+}
+
+a = 2 + 2;
+switch(a){
+    case 3:
+        console.log('El resultado es 3');
+    case 4:
+        console.log('El resultado es 4');
+    default:
+        console.log('Ninguno de los dos valores');
+    
+}
+
+a = 2 + 1;
+switch(a){
+    case 3:
+    case 4:
+        console.log('El resultado es 3');
+        console.log('El resultado es 4');
+        break;
+    default:
+        console.log('Ninguno de los dos valores');
+}
+
+// FUNCIONES
+
+/*
+function nombre([parámetros]){
+}
+*/
+
+function saludar(){
+    console.log('Hola Mundo');
+}
+
+saludar();
+
+// Variable Local
+
+function saludar_nombre(){
+    let nombre_xx = 'Roberto'; //Variable local
+    console.log(`Hola ${nombre_xx}`);
+}
+// console.log(`Hola ${nombre_xx}`);
+
+// Variable externa
+let nombre_xx = "Carlos";
+function saludar_nombre(){
+     let nombre_xx = 'Roberto'; //Variable local
+    console.log(`Hola ${nombre_xx}`);
+}
+
+console.log(`Hola ${nombre_xx}`);
+saludar_nombre();
+
+// Parámetros
+console.log("**************");
+function mensaje_(de, texto){
+    console.log(`${de}: ${texto}`);
+}
+
+mensaje_('Roberto', 'Hola María.')
+mensaje_('María', 'Hola Roberto.')
+
+// Valores predeterminados
+console.log("**************");
+function mensaje_(de, texto=''){
+    console.log(`${de}: ${texto}`);
+}
+
+mensaje_('Roberto')
+mensaje_('María', 'Hola Roberto.')
+
+function sumar(a, b){
+    return a + b;
+}
+
+function sumar_dos(a, b){
+    return null;
+}
+
+console.log(sumar(4, 5));
+console.log(sumar_dos(4, 5));
+console.log(sumar_dos()=== undefined)
+
+
+// HUF que devuelva la sumatoria de los números pares del 1 al x
+
+function sumatoria_pares(x){
+    sumatoria = 0;
+    for(i=0; i<= x; i++){
+        if(es_par(i)) sumatoria = sumatoria + i;
+    }
+    return sumatoria;
+}
+
+function es_par(n){
+    return n % 2 == 0;
+}
+
+console.log(sumatoria_pares(10))
+
+// Expresión y Declaración de una función
+
+// Declarar una función
+
+function hola(){
+    console.log('Hola Mundo');
+}
+
+console.log(hola);
+
+let aux = hola;
+aux();
+
+// Expresión de una funcion
+
+let hola_dos = function(){
+    console.log('Hola Mundo');
+};
+
+
+// Funciones flecha 
+
+let hola_dos___ = function(){
+    console.log('Hola Mundo');
+};
+
+let hola_dos_flecha = () => console.log('Hola Mundo');
+
+//****************** 
+let saludar_nombre_xx = function(nombre){
+    console.log(`Hola ${nombre}!`);
+}
+
+let saludar_nombre_xx_flecha = (nombre) => console.log(`Hola ${nombre}!`);
+saludar_nombre_xx_flecha = nombre => console.log(`Hola ${nombre}!`);
+
+// ****************
+
+let sumar_ex = function(a, b){
+     return a + b;
+}
+
+let sumgar_ex_flecha = (a, b) => {
+    return a + b;
+};
+
+// Creación de una función de manera dinámica
+edad = 15;
+
+let valor_tomado = (edad > 18) ? 5: 6;
+
+let saludo_edad = (edad > 18) ? 
+    () => console.log('Es Mayor de edad'): 
+    () => console.log('Es Menor de edad');
+
+saludo_edad();
+
+// Callback
+
+function decidir(pregunta, si, no){
+    if (confirm(pregunta)) si()
+    else no();
+}
+
+let si = () => alert('La persona dijo que si!!!');
+let no = () => alert('La persona dijo que no !!!');
+
+decidir('¿Estas interesado en aprender JavaScript?', si, no);
